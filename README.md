@@ -14,6 +14,8 @@ The goal is mastery, not lesson completion.
 - `examples/`: complete examples for Neural Networks, Python, Data Governance, resource-grounded sessions, deep dives, branching paths, and context restoration.
 - `documentation/`: user-facing explanations for the learning graph, checkpoint system, deep dives, and extensibility.
 - `scripts/validate_json.py`: lightweight JSON validation helper.
+- `claude.sh`: project initializer for Claude, Codex, or generic agents.
+- `codex.sh`: convenience wrapper that initializes Codex projects.
 
 ## Core Learning Loop
 
@@ -30,9 +32,9 @@ The agent should prefer hints before explanations and explanations before full s
 
 ## Quick Start For An AI Agent
 
-1. Load [SKILL.md](/Users/rohinpatel/Development/myprojects/tdl-skill/SKILL.md).
-2. Read [references/methodology.md](/Users/rohinpatel/Development/myprojects/tdl-skill/references/methodology.md) if you need the full mentor workflow.
-3. Copy the JSON templates in [templates](/Users/rohinpatel/Development/myprojects/tdl-skill/templates) into a learner-specific storage location.
+1. Load [SKILL.md](SKILL.md).
+2. Read [references/methodology.md](references/methodology.md) if you need the full mentor workflow.
+3. Copy the JSON templates in [templates](templates) into a learner-specific storage location.
 4. Ask the Phase 0 assessment questions.
 5. Start with a tiny challenge.
 6. Persist updates after every meaningful interaction.
@@ -43,7 +45,25 @@ Example first prompt:
 I will use TDL-Skill for Python. Assess my current level, then give me a tiny challenge before explaining anything.
 ```
 
-For a fuller walkthrough, see [documentation/onboarding-guide.md](/Users/rohinpatel/Development/myprojects/tdl-skill/documentation/onboarding-guide.md).
+For a fuller walkthrough, see [documentation/onboarding-guide.md](documentation/onboarding-guide.md).
+
+## Install Into A Learning Project
+
+Run the installer from this repository:
+
+```bash
+./claude.sh /path/to/my-learning-project --domain "Python"
+```
+
+For Claude it writes `CLAUDE.md`; for Codex use `--agent codex`; for a pasteable prompt use `--agent generic`.
+
+Codex shortcut:
+
+```bash
+./codex.sh /path/to/my-learning-project --domain "Python"
+```
+
+After pushing this repo to GitHub, users can run it directly from the raw script. See [INSTALL.md](INSTALL.md).
 
 ## Resource-Grounded Learning
 
@@ -51,7 +71,7 @@ Learner-provided materials are primary sources. The agent should use supplied bo
 
 When external knowledge is used, the agent must label it clearly as external context.
 
-See [documentation/resource-grounded-deep-dives.md](/Users/rohinpatel/Development/myprojects/tdl-skill/documentation/resource-grounded-deep-dives.md).
+See [documentation/resource-grounded-deep-dives.md](documentation/resource-grounded-deep-dives.md).
 
 ## Persistence Model
 
@@ -78,14 +98,14 @@ The helper checks that included JSON files are parseable. Full schema validation
 
 ## Example Domains
 
-- [Neural Networks](/Users/rohinpatel/Development/myprojects/tdl-skill/examples/domains/neural-networks/session.json)
-- [Python](/Users/rohinpatel/Development/myprojects/tdl-skill/examples/domains/python/session.json)
-- [Data Governance](/Users/rohinpatel/Development/myprojects/tdl-skill/examples/domains/data-governance/session.json)
+- [Neural Networks](examples/domains/neural-networks/session.json)
+- [Python](examples/domains/python/session.json)
+- [Data Governance](examples/domains/data-governance/session.json)
 
 ## Contributing
 
-See [CONTRIBUTING.md](/Users/rohinpatel/Development/myprojects/tdl-skill/CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Roadmap
 
-See [ROADMAP.md](/Users/rohinpatel/Development/myprojects/tdl-skill/ROADMAP.md).
+See [ROADMAP.md](ROADMAP.md).
