@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tdl-skill.local/schemas/resource-index.schema.json",
+  "title": "Resource Index",
+  "type": "object",
+  "required": ["learner_id", "resources"],
+  "properties": {
+    "learner_id": { "type": "string" },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "type", "priority"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["book", "pdf", "documentation", "slides", "video", "notes", "link", "internal_document", "tutorial"]
+          },
+          "location": { "type": "string" },
+          "priority": {
+            "type": "string",
+            "enum": ["primary", "approved_secondary", "external"]
+          },
+          "covered_sections": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tdl-skill.local/schemas/learning-branch.schema.json",
+  "title": "Learning Branches",
+  "type": "object",
+  "required": ["learner_id", "branches"],
+  "properties": {
+    "learner_id": { "type": "string" },
+    "branches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "topic", "parent_topic", "branch_type", "trigger_reason", "status", "checkpoint"],
+        "properties": {
+          "id": { "type": "string" },
+          "topic": { "type": "string" },
+          "parent_topic": { "type": "string" },
+          "branch_type": {
+            "type": "string",
+            "enum": ["concept", "mathematical", "implementation", "visual", "historical", "resource"]
+          },
+          "trigger_reason": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["ACTIVE", "PAUSED", "COMPLETED", "RETURN_PENDING"]
+          },
+          "started_at": { "type": "string", "format": "date-time" },
+          "completed_at": { "type": ["string", "null"], "format": "date-time" },
+          "checkpoint": {
+            "type": "object",
+            "required": ["topic", "challenge", "next_action"],
+            "properties": {
+              "topic": { "type": "string" },
+              "lesson": { "type": "string" },
+              "exercise": { "type": "string" },
+              "challenge": { "type": "string" },
+              "progress_state": { "type": "string" },
+              "next_action": { "type": "string" }
+            }
+          },
+          "summary": { "type": "string" },
+          "concepts_learned": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "relationship_to_parent": { "type": "string" }
+        }
+      }
+    }
+  }
+}

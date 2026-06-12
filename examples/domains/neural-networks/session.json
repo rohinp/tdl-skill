@@ -1,0 +1,29 @@
+{
+  "domain": "Neural Networks",
+  "learner_profile": {
+    "learner_id": "nn-learner",
+    "goal": "Understand neural networks by implementing core pieces from scratch.",
+    "preference": "Small coding tasks with visual explanations."
+  },
+  "assessment": {
+    "experience": "Can write Python functions, new to neural networks.",
+    "confidence": 35
+  },
+  "micro_challenge": {
+    "topic": "Neuron",
+    "prompt": "Write a Python function that takes two inputs, two weights, and a bias, then returns the weighted sum.",
+    "difficulty": 1
+  },
+  "learner_attempt": "def neuron(x1, x2, w1, w2, b): return x1*w1 + x2*w2",
+  "feedback": {
+    "strengths": ["Correctly multiplied inputs by weights."],
+    "mistakes": ["Bias was accepted as a parameter but not added."],
+    "targeted_explanation": "A bias shifts the weighted sum, so add b after the input-weight products."
+  },
+  "progress_update": {
+    "Neuron": 45,
+    "Weights": 40,
+    "Bias": 20
+  },
+  "next_action": "Refine the function by adding bias, then explain what the bias changes."
+}

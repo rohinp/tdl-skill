@@ -1,0 +1,26 @@
+{
+  "learner_id": "example-learner",
+  "branches": [
+    {
+      "id": "branch-dot-product",
+      "topic": "Dot Product",
+      "parent_topic": "Perceptron",
+      "branch_type": "mathematical",
+      "trigger_reason": "Learner could implement weighted sum but could not explain why weights are multiplied by inputs.",
+      "status": "COMPLETED",
+      "started_at": "2026-01-10T10:00:00Z",
+      "completed_at": "2026-01-10T10:35:00Z",
+      "checkpoint": {
+        "topic": "Perceptron",
+        "lesson": "Weighted sums",
+        "exercise": "Exercise 4",
+        "challenge": "Implement weighted sum for a perceptron.",
+        "progress_state": "Attempt reviewed; conceptual blocker found.",
+        "next_action": "Refine the weighted sum explanation and implementation."
+      },
+      "summary": "The learner practiced dot products as a way to combine aligned vectors into one score.",
+      "concepts_learned": ["Dot product", "Weighted sum", "Linear combination"],
+      "relationship_to_parent": "A perceptron's weighted sum is a dot product between inputs and weights."
+    }
+  ]
+}

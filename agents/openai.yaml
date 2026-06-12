@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Driven Learning"
+  short_description: "Guide AI agents through mastery-first learning."
+  default_prompt: "Use test-driven learning to assess me, give a small challenge, review my attempt, and persist learning state."

@@ -1,0 +1,26 @@
+{
+  "learner_id": "example-learner",
+  "generated_at": "2026-01-10T11:00:00Z",
+  "tasks": [
+    {
+      "id": "rev-gradient-001",
+      "concept": "Gradient Descent",
+      "priority": 5,
+      "task_type": "explain",
+      "prompt": "In your own words, explain what gradient descent is trying to reduce.",
+      "reason": "Low mastery, low confidence, and multiple hints.",
+      "due_at": "2026-01-11T09:00:00Z",
+      "status": "scheduled"
+    },
+    {
+      "id": "rev-bias-001",
+      "concept": "Bias",
+      "priority": 3,
+      "task_type": "implementation",
+      "prompt": "Modify a weighted sum function to include bias and test it with one example.",
+      "reason": "Recent mistake omitted bias.",
+      "due_at": "2026-01-12T09:00:00Z",
+      "status": "scheduled"
+    }
+  ]
+}

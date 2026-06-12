@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tdl-skill.local/schemas/curiosity.schema.json",
+  "title": "Curiosity",
+  "type": "object",
+  "required": ["learner_id", "items"],
+  "properties": {
+    "learner_id": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "topic", "question", "timestamp", "classification", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "topic": { "type": "string" },
+          "question": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "related_concept": { "type": "string" },
+          "classification": {
+            "type": "string",
+            "enum": ["curiosity", "blocker"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["open", "scheduled", "converted_to_deep_dive", "answered", "closed"]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "domain": "Data Governance",
+  "resource_index": {
+    "resources": [
+      {
+        "id": "company-policy-001",
+        "title": "Internal Data Ownership Policy",
+        "type": "internal_document",
+        "location": "User-provided document",
+        "priority": "primary",
+        "covered_sections": ["Roles and responsibilities"]
+      }
+    ]
+  },
+  "session": {
+    "topic": "Data ownership",
+    "resource_ref": "company-policy-001",
+    "micro_challenge": "Use the policy excerpt to decide who approves a change to the official customer segment definition.",
+    "grounding_rule": "Use company policy over general governance conventions.",
+    "external_context_used": false
+  }
+}

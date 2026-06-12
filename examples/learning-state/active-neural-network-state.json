@@ -1,0 +1,27 @@
+{
+  "learner_id": "example-learner",
+  "status": "ACTIVE",
+  "current_domain": "Neural Networks",
+  "current_topic": "Perceptron",
+  "current_stage": "refinement",
+  "current_challenge": {
+    "id": "nn-perceptron-004",
+    "prompt": "Implement weighted_sum(inputs, weights, bias) and explain why each input has a matching weight.",
+    "difficulty": 2,
+    "resource_refs": []
+  },
+  "last_attempt": "Implemented multiplication but forgot bias.",
+  "last_feedback": "Weighted products were correct; add bias and explain its role.",
+  "next_action": "Ask learner to refine the implementation and explanation.",
+  "active_branch_id": null,
+  "checkpoint": {
+    "id": "checkpoint-perceptron-004",
+    "created_at": "2026-01-10T10:40:00Z",
+    "topic": "Perceptron",
+    "stage": "refinement",
+    "challenge_id": "nn-perceptron-004",
+    "last_attempt": "Implemented multiplication but forgot bias.",
+    "next_action": "Refine implementation."
+  },
+  "updated_at": "2026-01-10T10:40:00Z"
+}

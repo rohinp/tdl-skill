@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tdl-skill.local/schemas/learning-state.schema.json",
+  "title": "Learning State",
+  "type": "object",
+  "required": ["learner_id", "status", "current_domain", "current_topic", "current_stage", "current_challenge"],
+  "properties": {
+    "learner_id": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["ACTIVE", "PAUSED", "COMPLETED", "DEEP_DIVE", "RETURN_PENDING"]
+    },
+    "current_domain": { "type": "string" },
+    "current_topic": { "type": "string" },
+    "current_stage": {
+      "type": "string",
+      "enum": ["assessment", "micro_challenge", "attempt", "feedback", "targeted_explanation", "refinement", "challenge_upgrade", "project", "revision"]
+    },
+    "current_challenge": { "$ref": "#/$defs/challenge" },
+    "last_attempt": { "type": "string" },
+    "last_feedback": { "type": "string" },
+    "next_action": { "type": "string" },
+    "active_branch_id": { "type": ["string", "null"] },
+    "checkpoint": { "$ref": "#/$defs/checkpoint" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "$defs": {
+    "challenge": {
+      "type": "object",
+      "required": ["id", "prompt", "difficulty"],
+      "properties": {
+        "id": { "type": "string" },
+        "prompt": { "type": "string" },
+        "difficulty": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "resource_refs": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "checkpoint": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "topic": { "type": "string" },
+        "stage": { "type": "string" },
+        "challenge_id": { "type": "string" },
+        "last_attempt": { "type": "string" },
+        "next_action": { "type": "string" }
+      }
+    }
+  }
+}

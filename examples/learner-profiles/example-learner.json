@@ -1,0 +1,30 @@
+{
+  "learner_id": "example-learner",
+  "created_at": "2026-01-10T09:00:00Z",
+  "updated_at": "2026-01-10T11:00:00Z",
+  "goals": [
+    "Build intuition for neural networks.",
+    "Implement a small neural network from scratch."
+  ],
+  "available_time": "30 minutes per weekday",
+  "preferences": {
+    "explanation_style": "visual and practical",
+    "challenge_size": "small",
+    "preferred_modalities": ["coding", "diagrams", "active recall"],
+    "preferred_resources": ["provided notes", "official documentation"]
+  },
+  "strengths": [
+    {
+      "concept": "Python functions",
+      "evidence": "Wrote small functions with correct parameters.",
+      "updated_at": "2026-01-10T09:30:00Z"
+    }
+  ],
+  "struggles": [
+    {
+      "concept": "Dot product",
+      "evidence": "Could calculate but could not explain why it applies to perceptrons.",
+      "updated_at": "2026-01-10T10:05:00Z"
+    }
+  ]
+}

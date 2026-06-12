@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tdl-skill.local/schemas/learner-profile.schema.json",
+  "title": "Learner Profile",
+  "type": "object",
+  "required": ["learner_id", "created_at", "goals", "preferences", "strengths", "struggles"],
+  "properties": {
+    "learner_id": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "goals": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "available_time": { "type": "string" },
+    "preferences": {
+      "type": "object",
+      "properties": {
+        "explanation_style": { "type": "string" },
+        "challenge_size": { "type": "string" },
+        "preferred_modalities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "preferred_resources": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "strengths": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/concept_note" }
+    },
+    "struggles": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/concept_note" }
+    }
+  },
+  "$defs": {
+    "concept_note": {
+      "type": "object",
+      "required": ["concept", "evidence"],
+      "properties": {
+        "concept": { "type": "string" },
+        "evidence": { "type": "string" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

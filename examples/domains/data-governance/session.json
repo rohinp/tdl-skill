@@ -1,0 +1,29 @@
+{
+  "domain": "Data Governance",
+  "learner_profile": {
+    "learner_id": "governance-learner",
+    "goal": "Apply data governance concepts at work.",
+    "preference": "Business scenarios and practical classification exercises."
+  },
+  "assessment": {
+    "experience": "Knows basic data terms, new to formal governance.",
+    "confidence": 40
+  },
+  "micro_challenge": {
+    "topic": "Data Owner vs Data Steward",
+    "prompt": "A sales dashboard has incorrect customer segment labels. Who is more likely accountable for defining the correct business meaning, and who helps maintain the metadata and quality rules?",
+    "difficulty": 1
+  },
+  "learner_attempt": "The data engineer fixes it and the dashboard owner approves it.",
+  "feedback": {
+    "strengths": ["Identified that operational ownership and approval matter."],
+    "mistakes": ["Confused technical fixing with governance accountability."],
+    "targeted_explanation": "A data owner is accountable for business meaning and decisions; a data steward often maintains definitions, quality rules, and metadata."
+  },
+  "progress_update": {
+    "Data Owner": 35,
+    "Data Steward": 35,
+    "Accountability": 30
+  },
+  "next_action": "Classify three responsibilities as owner, steward, or technical team."
+}

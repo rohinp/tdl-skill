@@ -1,0 +1,51 @@
+{
+  "domain": "Neural Networks",
+  "nodes": [
+    {
+      "id": "neuron",
+      "label": "Neuron",
+      "type": "concept",
+      "mastery_gate": {
+        "min_mastery_score": 70,
+        "requires_explanation": true,
+        "requires_independent_application": true
+      }
+    },
+    {
+      "id": "weights",
+      "label": "Weights",
+      "type": "concept",
+      "mastery_gate": {
+        "min_mastery_score": 70,
+        "requires_explanation": true,
+        "requires_independent_application": true
+      }
+    },
+    {
+      "id": "perceptron",
+      "label": "Perceptron",
+      "type": "concept",
+      "mastery_gate": {
+        "min_mastery_score": 75,
+        "requires_explanation": true,
+        "requires_independent_application": true
+      }
+    },
+    {
+      "id": "dot-product",
+      "label": "Dot Product",
+      "type": "deep_dive",
+      "mastery_gate": {
+        "min_mastery_score": 65,
+        "requires_explanation": true,
+        "requires_independent_application": false
+      }
+    }
+  ],
+  "edges": [
+    { "from": "neuron", "to": "weights", "type": "prerequisite" },
+    { "from": "weights", "to": "perceptron", "type": "prerequisite" },
+    { "from": "perceptron", "to": "dot-product", "type": "branches_to" },
+    { "from": "dot-product", "to": "perceptron", "type": "returns_to" }
+  ]
+}

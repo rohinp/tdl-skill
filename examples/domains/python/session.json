@@ -1,0 +1,28 @@
+{
+  "domain": "Python",
+  "learner_profile": {
+    "learner_id": "python-learner",
+    "goal": "Become comfortable writing practical Python scripts.",
+    "preference": "Learn by debugging and small projects."
+  },
+  "assessment": {
+    "experience": "Understands variables and loops, unsure about functions.",
+    "confidence": 50
+  },
+  "micro_challenge": {
+    "topic": "Functions",
+    "prompt": "Write a function called average that receives a list of numbers and returns their average.",
+    "difficulty": 1
+  },
+  "learner_attempt": "def average(nums): return sum(nums) / len(nums)",
+  "feedback": {
+    "strengths": ["Correct function shape.", "Correct use of sum and len."],
+    "mistakes": ["No handling for an empty list."],
+    "targeted_explanation": "A robust function should decide what to do when len(nums) is zero."
+  },
+  "progress_update": {
+    "Functions": 65,
+    "Edge cases": 25
+  },
+  "next_action": "Add behavior for an empty list and explain your choice."
+}

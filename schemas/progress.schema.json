@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tdl-skill.local/schemas/progress.schema.json",
+  "title": "Progress",
+  "type": "object",
+  "required": ["learner_id", "concepts"],
+  "properties": {
+    "learner_id": { "type": "string" },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["concept", "mastery_score", "confidence", "evidence"],
+        "properties": {
+          "concept": { "type": "string" },
+          "mastery_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "confidence": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "hint_count": { "type": "integer", "minimum": 0 },
+          "retries": { "type": "integer", "minimum": 0 },
+          "last_practiced_at": { "type": "string", "format": "date-time" },
+          "evidence": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

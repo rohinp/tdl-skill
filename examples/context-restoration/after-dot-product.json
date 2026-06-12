@@ -1,0 +1,14 @@
+{
+  "status": "RETURN_PENDING",
+  "completed_branch": "branch-dot-product",
+  "restoration_message": {
+    "summary": "You learned that a dot product multiplies matching input and weight values, then adds them into one score.",
+    "why_it_matters": "That is exactly the weighted sum inside a perceptron.",
+    "returning_to": {
+      "topic": "Perceptron",
+      "exercise": "Exercise 4",
+      "challenge": "Implement weighted sum"
+    },
+    "next_prompt": "Update your perceptron function to include bias, then explain why each input has a matching weight."
+  }
+}

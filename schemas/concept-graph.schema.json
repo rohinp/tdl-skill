@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tdl-skill.local/schemas/concept-graph.schema.json",
+  "title": "Concept Graph",
+  "type": "object",
+  "required": ["domain", "nodes", "edges"],
+  "properties": {
+    "domain": { "type": "string" },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "type"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["concept", "skill", "exercise", "project", "resource_section", "deep_dive"]
+          },
+          "mastery_gate": {
+            "type": "object",
+            "properties": {
+              "min_mastery_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+              "requires_explanation": { "type": "boolean" },
+              "requires_independent_application": { "type": "boolean" }
+            }
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to", "type"],
+        "properties": {
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["prerequisite", "depends_on", "reinforces", "blocks", "branches_to", "returns_to"]
+          }
+        }
+      }
+    }
+  }
+}

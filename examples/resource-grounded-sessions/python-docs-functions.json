@@ -1,0 +1,22 @@
+{
+  "domain": "Python",
+  "resource_index": {
+    "resources": [
+      {
+        "id": "python-docs-functions",
+        "title": "Python Tutorial - Defining Functions",
+        "type": "documentation",
+        "location": "User-provided link or local copy",
+        "priority": "primary",
+        "covered_sections": ["Defining Functions"]
+      }
+    ]
+  },
+  "session": {
+    "topic": "Function defaults",
+    "resource_ref": "python-docs-functions",
+    "micro_challenge": "Based on the supplied function defaults section, write a function greet(name, prefix='Hello') that returns the greeting string.",
+    "grounding_rule": "Evaluate the answer against the provided Python documentation first.",
+    "external_context_used": false
+  }
+}

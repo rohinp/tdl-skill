@@ -1,0 +1,15 @@
+{
+  "learner_id": "learner-001",
+  "created_at": "2026-01-01T09:00:00Z",
+  "updated_at": "2026-01-01T09:00:00Z",
+  "goals": [],
+  "available_time": "",
+  "preferences": {
+    "explanation_style": "",
+    "challenge_size": "small",
+    "preferred_modalities": [],
+    "preferred_resources": []
+  },
+  "strengths": [],
+  "struggles": []
+}

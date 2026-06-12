@@ -1,0 +1,27 @@
+{
+  "learner_id": "learner-001",
+  "status": "ACTIVE",
+  "current_domain": "",
+  "current_topic": "",
+  "current_stage": "assessment",
+  "current_challenge": {
+    "id": "challenge-001",
+    "prompt": "",
+    "difficulty": 1,
+    "resource_refs": []
+  },
+  "last_attempt": "",
+  "last_feedback": "",
+  "next_action": "Complete Phase 0 assessment.",
+  "active_branch_id": null,
+  "checkpoint": {
+    "id": "checkpoint-001",
+    "created_at": "2026-01-01T09:00:00Z",
+    "topic": "",
+    "stage": "assessment",
+    "challenge_id": "challenge-001",
+    "last_attempt": "",
+    "next_action": "Complete Phase 0 assessment."
+  },
+  "updated_at": "2026-01-01T09:00:00Z"
+}

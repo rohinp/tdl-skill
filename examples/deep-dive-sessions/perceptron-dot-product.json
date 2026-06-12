@@ -1,0 +1,26 @@
+{
+  "branch_id": "branch-dot-product",
+  "parent_topic": "Perceptron",
+  "trigger": {
+    "type": "blocker",
+    "evidence": "Learner said, 'I can code it but I do not understand why weights are multiplied.'"
+  },
+  "checkpoint": {
+    "topic": "Perceptron",
+    "exercise": "Implement weighted sum",
+    "challenge": "Return y = x1*w1 + x2*w2 + b.",
+    "next_action": "Refine implementation and explain the weighted sum."
+  },
+  "deep_dive": {
+    "topic": "Dot Product",
+    "branch_type": "mathematical",
+    "micro_challenge": "Given inputs [2, 3] and weights [0.5, 4], calculate the dot product.",
+    "targeted_explanation": "The dot product multiplies matching positions and adds the results, producing one score from two aligned vectors."
+  },
+  "completion": {
+    "summary": "The learner connected weighted sums to dot products.",
+    "concepts_learned": ["Dot product", "Aligned vectors", "Linear combination"],
+    "relationship_to_original_topic": "The perceptron uses a dot product to combine each input with its matching weight.",
+    "return_to": "Perceptron Exercise: Implement weighted sum"
+  }
+}

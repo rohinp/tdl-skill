@@ -1,0 +1,11 @@
+{
+  "domain": "Neural Networks",
+  "primary_path": ["Neuron", "Weights", "Perceptron", "Gradient Descent"],
+  "branch": {
+    "from": "Perceptron",
+    "path": ["Dot Product", "Vector Geometry", "Linear Combination"],
+    "return_to": "Perceptron",
+    "reason": "Mathematical blocker on weighted sums."
+  },
+  "after_return": ["Gradient Descent", "Backpropagation"]
+}
