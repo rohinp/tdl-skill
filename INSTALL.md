@@ -90,6 +90,36 @@ my-learning-project/
 
 `codex.sh` is a convenience wrapper for `claude.sh --agent codex`.
 
+## After Install: Start Learning
+
+Open the target project in your agent. If you use Claude Code and run `/init`, let it read the project first. Then start the learning loop with:
+
+```text
+Use the TDL-Skill framework in this repo.
+
+My learning domain is <your domain>.
+
+Start Phase 0 assessment now. Ask me only the minimum questions needed to understand my current level, goals, available time, preferred learning style, and any resources I want to use.
+
+After the assessment, give me one small micro-challenge before explaining anything.
+```
+
+After you answer the assessment questions, use:
+
+```text
+Based on my answers, update `.tdl-skill/state/learner-profile.json` and `.tdl-skill/state/learning-state.json`, then give me the first micro-challenge.
+```
+
+For example:
+
+```text
+Use TDL-Skill to teach me Python with genAI. My goal is to build practical Python apps that call LLM APIs, use prompts well, handle structured outputs, and eventually build small agent workflows.
+
+Assess me first, then give one tiny challenge. Do not explain the topic before I attempt it.
+```
+
+The agent should continue updating `.tdl-skill/state/` after attempts, feedback, blockers, curiosity questions, revision tasks, and deep dives.
+
 ## Updating An Existing Install
 
 By default, the installer preserves existing `.tdl-skill/framework` files. To replace them:

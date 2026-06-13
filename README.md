@@ -65,6 +65,8 @@ Codex shortcut:
 
 After pushing this repo to GitHub, users can run it directly from the raw script. See [INSTALL.md](INSTALL.md).
 
+After installation, open the target project in your agent and ask it to start Phase 0 assessment. The exact starter prompts are in [INSTALL.md](INSTALL.md#after-install-start-learning).
+
 ## Resource-Grounded Learning
 
 Learner-provided materials are primary sources. The agent should use supplied books, PDFs, docs, slides, notes, links, videos, or internal documents before relying on general model knowledge.

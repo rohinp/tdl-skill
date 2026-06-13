@@ -37,3 +37,19 @@ After the first attempt, update:
 ## 6. Resume Later
 
 When the learner returns, read the latest learning state and checkpoint. Summarize where they stopped and give the next small action.
+
+## Starter Prompt For A Learner
+
+Use this after installing TDL-Skill into a project:
+
+```text
+Use the TDL-Skill framework in this repo.
+
+My learning domain is <your domain>.
+
+Start Phase 0 assessment now. Ask me only the minimum questions needed to understand my current level, goals, available time, preferred learning style, and any resources I want to use.
+
+After the assessment, give me one small micro-challenge before explaining anything.
+```
+
+After the learner answers, update `.tdl-skill/state/learner-profile.json` and `.tdl-skill/state/learning-state.json`, then give the first micro challenge.

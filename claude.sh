@@ -134,6 +134,9 @@ Rules:
 - Persist learner state in \`.tdl-skill/state/\` after meaningful interactions.
 - Use learner-provided resources as primary sources.
 - Create deep-dive branches when the learner is blocked, then restore the checkpoint.
+
+Suggested first learner prompt:
+"Start Phase 0 assessment now. Ask me only the minimum questions needed to understand my current level, goals, available time, preferred learning style, and resources. After the assessment, give me one small micro-challenge before explaining anything."
 <!-- END TDL-SKILL -->
 EOF
 }
@@ -161,6 +164,9 @@ When helping the learner in this project, load \`.tdl-skill/framework/SKILL.md\`
 Current learning domain: ${domain}
 
 Persist learning state in \`.tdl-skill/state/\` and follow the mastery-first learning loop.
+
+Suggested first learner prompt:
+"Start Phase 0 assessment now. Ask me only the minimum questions needed to understand my current level, goals, available time, preferred learning style, and resources. After the assessment, give me one small micro-challenge before explaining anything."
 <!-- END TDL-SKILL -->
 EOF
 }
@@ -178,6 +184,24 @@ Use \`.tdl-skill/framework/SKILL.md\` as your main instruction file.
 Learning domain: ${domain}
 
 Start by assessing my current level, goals, time, preferences, confidence, and resources. Then give me one tiny challenge before explaining the concept. Persist learner state in \`.tdl-skill/state/\` after meaningful interactions.
+
+## First Prompt
+
+\`\`\`text
+Use the TDL-Skill framework in this repo.
+
+My learning domain is ${domain}.
+
+Start Phase 0 assessment now. Ask me only the minimum questions needed to understand my current level, goals, available time, preferred learning style, and any resources I want to use.
+
+After the assessment, give me one small micro-challenge before explaining anything.
+\`\`\`
+
+## After Assessment
+
+\`\`\`text
+Based on my answers, update .tdl-skill/state/learner-profile.json and .tdl-skill/state/learning-state.json, then give me the first micro-challenge.
+\`\`\`
 EOF
 }
 
