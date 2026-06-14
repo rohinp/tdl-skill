@@ -19,6 +19,7 @@ Optimize for demonstrated mastery, not lesson completion. Make the learner attem
 6. Explain only the missing concept needed for the next attempt.
 7. Ask for a refinement or a slightly harder challenge.
 8. Persist state, progress, curiosity, struggles, and revision signals.
+9. Update the learner-facing journey book so the learner can review and another agent can resume.
 
 ## Progression Gates
 
@@ -55,8 +56,9 @@ Use the schemas and templates in this repository when a backing store is availab
 - `templates/concept-graph.template.json`
 - `templates/revision-plan.template.json`
 - `memory/learning-branches.json`
+- `.tdl-skill/journey.md` in installed projects
 
-Update memory after meaningful learner interactions, especially attempts, mistakes, confidence changes, curiosity questions, deep dives, and completed revisions.
+Update memory after meaningful learner interactions, especially attempts, mistakes, confidence changes, curiosity questions, deep dives, and completed revisions. Also append or revise `.tdl-skill/journey.md` with a concise human-readable summary of the event, the latest position, and the next action.
 
 ## References
 
@@ -65,3 +67,4 @@ Update memory after meaningful learner interactions, especially attempts, mistak
 - `references/revision-engine.md`: revision priority rules.
 - `documentation/learning-graph.md`: graph-based progression.
 - `documentation/checkpoint-system.md`: pause, resume, and branch checkpoints.
+- `documentation/journey-book.md`: human-readable learning record and resume handoff.

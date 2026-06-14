@@ -62,6 +62,7 @@ TDL_SKILL_REPO_URL="https://github.com/OWNER/tdl-skill" \
 my-learning-project/
 ├── CLAUDE.md
 └── .tdl-skill/
+    ├── journey.md
     ├── framework/
     │   ├── SKILL.md
     │   ├── documentation/
@@ -80,6 +81,8 @@ my-learning-project/
         ├── resource-index.json
         └── revision-plan.json
 ```
+
+The journey book is intentionally outside `state/` because it is a durable learner-facing artifact, not just machine state.
 
 ## Agent Modes
 
@@ -118,7 +121,7 @@ Use TDL-Skill to teach me Python with genAI. My goal is to build practical Pytho
 Assess me first, then give one tiny challenge. Do not explain the topic before I attempt it.
 ```
 
-The agent should continue updating `.tdl-skill/state/` after attempts, feedback, blockers, curiosity questions, revision tasks, and deep dives.
+The agent should continue updating `.tdl-skill/state/` and `.tdl-skill/journey.md` after attempts, feedback, blockers, curiosity questions, revision tasks, and deep dives.
 
 ## Updating An Existing Install
 
@@ -128,4 +131,4 @@ By default, the installer preserves existing `.tdl-skill/framework` files. To re
 ./claude.sh /path/to/my-learning-project --domain "Python" --force
 ```
 
-Existing learner state is also preserved by default. With `--force`, framework files and state are reinitialized, so copy or commit existing state before using it on an active learning project.
+Existing learner state and journey book are also preserved by default. With `--force`, framework files, state, and journey book are reinitialized, so copy or commit existing learning artifacts before using it on an active learning project.

@@ -1,4 +1,4 @@
-# TDL-Skill
+# (Test Driven Learning) TDL-Skill
 
 TDL-Skill is a reusable, agent-agnostic learning framework for turning an AI assistant into a long-term mentor. It is built around test driven learning: the learner attempts small tasks first, then the agent gives feedback, targeted explanation, revision, and progressively harder challenges.
 
@@ -10,6 +10,7 @@ The goal is mastery, not lesson completion.
 - `references/`: methodology guides that any AI agent can follow.
 - `schemas/`: JSON Schemas for learner memory, learning state, concept graphs, progress, curiosity, resources, revision plans, and learning branches.
 - `templates/`: blank JSON files an agent can copy to start a new learner.
+- `templates/journey.template.md`: human-readable learning journey template.
 - `memory/`: example persistent memory files.
 - `examples/`: complete examples for Neural Networks, Python, Data Governance, resource-grounded sessions, deep dives, branching paths, and context restoration.
 - `documentation/`: user-facing explanations for the learning graph, checkpoint system, deep dives, and extensibility.
@@ -87,8 +88,11 @@ TDL-Skill keeps separate JSON files for:
 - Learning branches and deep dives
 - Revision plans
 - Resource index
+- Human-readable journey book
 
 The files are intentionally simple so they can be stored in a repository, local folder, database, vector store metadata layer, or agent memory system.
+
+Installed learning projects also include `.tdl-skill/journey.md`, a readable record of the learner's attempts, feedback, misconceptions, deep dives, progress, and next action. A learner can review it like a book, and another agent can use it to resume the journey if structured state is unavailable.
 
 ## Validate JSON Files
 
@@ -103,6 +107,7 @@ The helper checks that included JSON files are parseable. Full schema validation
 - [Neural Networks](examples/domains/neural-networks/session.json)
 - [Python](examples/domains/python/session.json)
 - [Data Governance](examples/domains/data-governance/session.json)
+- [Journey Book](examples/journey-books/python-with-genai-journey.md)
 
 ## Contributing
 

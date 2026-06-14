@@ -12,8 +12,8 @@ TDL-Skill is domain independent. Extend it by adding domain content, not by chan
 
 ## Add A New Memory Store
 
-Keep the same logical files even if storage changes. A database, vector store, or agent memory API should still preserve learner profile, state, progress, curiosity, branches, resources, and revision plans.
+Keep the same logical files even if storage changes. A database, vector store, or agent memory API should still preserve learner profile, state, progress, curiosity, branches, resources, revision plans, and the journey book.
 
 ## Add A New Agent Runtime
 
-Load `SKILL.md` as the trigger and procedural entry point. Expose `references/` and `documentation/` as optional retrieval material. Store JSON state in the runtime's durable storage.
+Load `SKILL.md` as the trigger and procedural entry point. Expose `references/` and `documentation/` as optional retrieval material. Store JSON state in the runtime's durable storage and maintain a human-readable journey book for review and handoff.

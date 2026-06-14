@@ -33,10 +33,13 @@ After the first attempt, update:
 - progress;
 - curiosity or blockers;
 - revision plan if needed.
+- journey book.
 
 ## 6. Resume Later
 
 When the learner returns, read the latest learning state and checkpoint. Summarize where they stopped and give the next small action.
+
+If `.tdl-skill/state/` is missing or stale, read `.tdl-skill/journey.md` and use the `Current Position`, latest timeline entry, and `Resume Brief` to reconstruct the next step.
 
 ## Starter Prompt For A Learner
 

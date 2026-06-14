@@ -24,7 +24,7 @@ Usage:
 Options:
   --domain NAME       Learning domain or skill to initialize.
   --agent NAME        claude, codex, generic, or all. Default: claude.
-  --force             Replace existing .tdl-skill/framework files.
+  --force             Replace existing .tdl-skill framework, state, and journey files.
   -h, --help          Show help.
 
 Remote usage:
@@ -32,7 +32,7 @@ Remote usage:
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/OWNER/tdl-skill/main/claude.sh)" -- path/to/project
 
 The script copies the TDL framework into the target project and initializes
-project-local learner state under .tdl-skill/state.
+project-local learner state under .tdl-skill/state plus .tdl-skill/journey.md.
 USAGE
 }
 
@@ -132,6 +132,7 @@ Rules:
 - Do not explain everything before the learner attempts.
 - Prefer hints before explanations and explanations before full solutions.
 - Persist learner state in \`.tdl-skill/state/\` after meaningful interactions.
+- Update \`.tdl-skill/journey.md\` as the human-readable learning book after meaningful interactions.
 - Use learner-provided resources as primary sources.
 - Create deep-dive branches when the learner is blocked, then restore the checkpoint.
 
@@ -163,7 +164,7 @@ When helping the learner in this project, load \`.tdl-skill/framework/SKILL.md\`
 
 Current learning domain: ${domain}
 
-Persist learning state in \`.tdl-skill/state/\` and follow the mastery-first learning loop.
+Persist learning state in \`.tdl-skill/state/\`, update \`.tdl-skill/journey.md\`, and follow the mastery-first learning loop.
 
 Suggested first learner prompt:
 "Start Phase 0 assessment now. Ask me only the minimum questions needed to understand my current level, goals, available time, preferred learning style, and resources. After the assessment, give me one small micro-challenge before explaining anything."
@@ -183,7 +184,7 @@ Use \`.tdl-skill/framework/SKILL.md\` as your main instruction file.
 
 Learning domain: ${domain}
 
-Start by assessing my current level, goals, time, preferences, confidence, and resources. Then give me one tiny challenge before explaining the concept. Persist learner state in \`.tdl-skill/state/\` after meaningful interactions.
+Start by assessing my current level, goals, time, preferences, confidence, and resources. Then give me one tiny challenge before explaining the concept. Persist learner state in \`.tdl-skill/state/\` and update \`.tdl-skill/journey.md\` after meaningful interactions.
 
 ## First Prompt
 
@@ -200,8 +201,90 @@ After the assessment, give me one small micro-challenge before explaining anythi
 ## After Assessment
 
 \`\`\`text
-Based on my answers, update .tdl-skill/state/learner-profile.json and .tdl-skill/state/learning-state.json, then give me the first micro-challenge.
+Based on my answers, update .tdl-skill/state/learner-profile.json, .tdl-skill/state/learning-state.json, and .tdl-skill/journey.md, then give me the first micro-challenge.
 \`\`\`
+EOF
+}
+
+write_journey_file() {
+  target="$1"
+  domain="$2"
+  force="$3"
+  ts="$(now_utc)"
+  file="$target/.tdl-skill/journey.md"
+
+  if [ "$force" != "true" ] && [ -f "$file" ]; then
+    info "Keeping existing journey book at $file"
+    return 0
+  fi
+
+  mkdir -p "$target/.tdl-skill"
+  cat > "$file" <<EOF
+# Learning Journey
+
+Domain: ${domain}
+Learner: local-learner
+Started: ${ts}
+
+This document is the human-readable learning record. It should let the learner review what happened, and it should let a new agent continue the journey when JSON state is missing or stale.
+
+## Current Position
+
+- Current domain: ${domain}
+- Current topic: Assessment
+- Current stage: assessment
+- Current challenge: Assess learner level, goals, time, preferences, confidence, and available resources.
+- Next action: Run Phase 0 assessment, then give one micro-challenge.
+
+## Learner Profile Summary
+
+- Goals:
+  - Build practical mastery in ${domain}.
+- Available time:
+- Preferred learning style:
+- Preferred resources:
+- Known strengths:
+- Known struggle areas:
+
+## Resource Index
+
+No learner resources registered yet.
+
+## Timeline
+
+### ${ts} - Project Initialized
+
+The TDL-Skill framework was initialized for ${domain}.
+
+Initial state:
+
+- Status: ACTIVE
+- Stage: assessment
+- Next action: ask minimum Phase 0 assessment questions.
+
+## Concept Progress
+
+No concepts assessed yet.
+
+## Curiosity And Open Questions
+
+No curiosity items captured yet.
+
+## Mistakes And Misconceptions
+
+No misconceptions captured yet.
+
+## Deep Dives
+
+No deep dives started yet.
+
+## Revision Log
+
+No revision tasks scheduled yet.
+
+## Resume Brief
+
+If continuing from this document only, start by asking the Phase 0 assessment questions for ${domain}. Then give one small micro-challenge before explaining anything.
 EOF
 }
 
@@ -391,6 +474,7 @@ main() {
   fi
 
   write_state_files "$target" "$domain" "$force"
+  write_journey_file "$target" "$domain" "$force"
 
   case "$agent" in
     claude)
@@ -414,6 +498,7 @@ main() {
   info "Domain: $domain"
   info "Framework: $target/.tdl-skill/framework"
   info "State: $target/.tdl-skill/state"
+  info "Journey: $target/.tdl-skill/journey.md"
   info ""
   info "Next: open the project with your agent and ask it to follow the TDL-Skill instructions."
 }
