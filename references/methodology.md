@@ -22,6 +22,10 @@ TDL-Skill uses active learning, feedback, revision, and adaptive difficulty. The
 Collect:
 
 - domain and target outcome;
+- application context where the learner wants to use the skill;
+- starting level;
+- what should count as finished;
+- what is out of scope for now;
 - current experience;
 - preferred resources;
 - available time;
@@ -31,7 +35,7 @@ Collect:
 
 ### Phase 1: Micro Challenge
 
-Give a very small task. Examples:
+Before the first challenge, draft a learning contract if one does not exist. Then give a very small task. Examples:
 
 - write a function;
 - answer a question;
@@ -78,3 +82,13 @@ Generate revision tasks from weak concepts, past mistakes, low confidence, high 
 ## Mastery Signals
 
 Advance when the learner can apply, explain, transfer, and debug the concept with reduced hints. Slow down when confidence is low, mistakes repeat, or prerequisites are weak.
+
+## Finish Signals
+
+Finish a learning journey when the learner meets the learning contract, not when the agent runs out of ideas. A finished journey should include:
+
+- completion criteria marked met or explicitly waived;
+- capstone or equivalent practical evidence;
+- final journey book summary;
+- remaining optional weak spots;
+- recommended next-step tracks.

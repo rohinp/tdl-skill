@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tdl-skill.local/schemas/learning-contract.schema.json",
+  "title": "Learning Contract",
+  "type": "object",
+  "required": [
+    "learner_id",
+    "domain",
+    "start_level",
+    "target_outcome",
+    "application_context",
+    "scope",
+    "completion_criteria",
+    "status"
+  ],
+  "properties": {
+    "learner_id": { "type": "string" },
+    "domain": { "type": "string" },
+    "start_level": {
+      "type": "string",
+      "enum": ["absolute_beginner", "beginner", "intermediate", "advanced", "unknown"]
+    },
+    "target_outcome": { "type": "string" },
+    "application_context": { "type": "string" },
+    "time_budget": { "type": "string" },
+    "scope": {
+      "type": "object",
+      "required": ["in_scope", "out_of_scope", "assumptions"],
+      "properties": {
+        "in_scope": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "out_of_scope": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "assumptions": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "completion_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "criterion", "evidence", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "criterion": { "type": "string" },
+          "evidence": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "met", "not_met", "waived"]
+          }
+        }
+      }
+    },
+    "capstone": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "evidence_required": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["not_started", "in_progress", "completed", "waived"]
+        }
+      }
+    },
+    "finish_behavior": {
+      "type": "object",
+      "properties": {
+        "when_complete": { "type": "string" },
+        "next_step_options": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "complete", "extended"]
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  }
+}

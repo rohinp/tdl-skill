@@ -137,7 +137,7 @@ Rules:
 - Create deep-dive branches when the learner is blocked, then restore the checkpoint.
 
 Suggested first learner prompt:
-"Start Phase 0 assessment now. Ask me only the minimum questions needed to understand my current level, goals, available time, preferred learning style, and resources. After the assessment, give me one small micro-challenge before explaining anything."
+"Start Phase 0 assessment now. Ask me only the minimum questions needed to understand what I want to learn, where I want to apply it, my starting level, what should count as finished, my available time, preferred learning style, and resources. After the assessment, draft the learning contract and give me one small micro-challenge before explaining anything."
 <!-- END TDL-SKILL -->
 EOF
 }
@@ -167,7 +167,7 @@ Current learning domain: ${domain}
 Persist learning state in \`.tdl-skill/state/\`, update \`.tdl-skill/journey.md\`, and follow the mastery-first learning loop.
 
 Suggested first learner prompt:
-"Start Phase 0 assessment now. Ask me only the minimum questions needed to understand my current level, goals, available time, preferred learning style, and resources. After the assessment, give me one small micro-challenge before explaining anything."
+"Start Phase 0 assessment now. Ask me only the minimum questions needed to understand what I want to learn, where I want to apply it, my starting level, what should count as finished, my available time, preferred learning style, and resources. After the assessment, draft the learning contract and give me one small micro-challenge before explaining anything."
 <!-- END TDL-SKILL -->
 EOF
 }
@@ -184,7 +184,7 @@ Use \`.tdl-skill/framework/SKILL.md\` as your main instruction file.
 
 Learning domain: ${domain}
 
-Start by assessing my current level, goals, time, preferences, confidence, and resources. Then give me one tiny challenge before explaining the concept. Persist learner state in \`.tdl-skill/state/\` and update \`.tdl-skill/journey.md\` after meaningful interactions.
+Start by assessing what I want to learn, where I want to apply it, my starting level, what should count as finished, goals, time, preferences, confidence, and resources. Draft a learning contract, then give me one tiny challenge before explaining the concept. Persist learner state in \`.tdl-skill/state/\` and update \`.tdl-skill/journey.md\` after meaningful interactions.
 
 ## First Prompt
 
@@ -193,15 +193,15 @@ Use the TDL-Skill framework in this repo.
 
 My learning domain is ${domain}.
 
-Start Phase 0 assessment now. Ask me only the minimum questions needed to understand my current level, goals, available time, preferred learning style, and any resources I want to use.
+Start Phase 0 assessment now. Ask me only the minimum questions needed to understand what I want to learn, where I want to apply it, my starting level, what should count as finished, my available time, preferred learning style, and any resources I want to use.
 
-After the assessment, give me one small micro-challenge before explaining anything.
+After the assessment, draft the learning contract and give me one small micro-challenge before explaining anything.
 \`\`\`
 
 ## After Assessment
 
 \`\`\`text
-Based on my answers, update .tdl-skill/state/learner-profile.json, .tdl-skill/state/learning-state.json, and .tdl-skill/journey.md, then give me the first micro-challenge.
+Based on my answers, update .tdl-skill/state/learner-profile.json, .tdl-skill/state/learning-contract.json, .tdl-skill/state/learning-state.json, and .tdl-skill/journey.md, then give me the first micro-challenge.
 \`\`\`
 EOF
 }
@@ -246,6 +246,21 @@ This document is the human-readable learning record. It should let the learner r
 - Known strengths:
 - Known struggle areas:
 
+## Learning Contract
+
+- Domain: ${domain}
+- Starting level: unknown
+- Application context:
+- Target outcome:
+- In scope:
+  - To be defined during Phase 0 assessment.
+- Out of scope:
+  - To be defined during Phase 0 assessment.
+- Completion criteria:
+  - To be defined during Phase 0 assessment.
+- Capstone or final evidence:
+  - To be defined during Phase 0 assessment.
+
 ## Resource Index
 
 No learner resources registered yet.
@@ -284,7 +299,7 @@ No revision tasks scheduled yet.
 
 ## Resume Brief
 
-If continuing from this document only, start by asking the Phase 0 assessment questions for ${domain}. Then give one small micro-challenge before explaining anything.
+If continuing from this document only, start by asking the Phase 0 assessment questions for ${domain}, including scope and finish criteria. Then draft the learning contract and give one small micro-challenge before explaining anything.
 EOF
 }
 
@@ -321,6 +336,35 @@ write_state_files() {
   },
   "strengths": [],
   "struggles": []
+}
+EOF
+
+  cat > "$target/.tdl-skill/state/learning-contract.json" <<EOF
+{
+  "learner_id": "local-learner",
+  "domain": $domain_json,
+  "start_level": "unknown",
+  "target_outcome": "Build practical mastery in ${domain}.",
+  "application_context": "",
+  "time_budget": "",
+  "scope": {
+    "in_scope": [],
+    "out_of_scope": [],
+    "assumptions": []
+  },
+  "completion_criteria": [],
+  "capstone": {
+    "description": "",
+    "evidence_required": [],
+    "status": "not_started"
+  },
+  "finish_behavior": {
+    "when_complete": "Summarize mastery evidence, update the journey book, mark the contract complete, and propose next-step options.",
+    "next_step_options": []
+  },
+  "status": "draft",
+  "created_at": "$ts",
+  "updated_at": "$ts"
 }
 EOF
 

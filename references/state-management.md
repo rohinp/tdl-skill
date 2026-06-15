@@ -5,6 +5,7 @@ Persist state after meaningful interactions so learning can resume later.
 ## Files
 
 - `learner-profile`: durable preferences, goals, strengths, struggles.
+- `learning-contract`: scope, boundary, completion criteria, capstone, and finish behavior.
 - `learning-state`: current domain, topic, stage, challenge, status, checkpoint.
 - `progress`: mastery scores and evidence.
 - `curiosity`: non-blocking questions and future exploration ideas.
@@ -19,6 +20,7 @@ Persist state after meaningful interactions so learning can resume later.
 Update memory when:
 
 - a learner completes or revises an attempt;
+- scope, target outcome, application context, or completion criteria change;
 - a misconception is found;
 - a hint is used;
 - confidence changes;
@@ -63,3 +65,16 @@ For each meaningful event, add or update:
 - next action.
 
 If JSON state and the journey book conflict, prefer the more recent timestamp and reconcile both files.
+
+## Contract Sync
+
+Keep `.tdl-skill/state/learning-contract.json` synchronized with the journey book. The contract decides what is required, optional, and out of scope.
+
+When completion criteria are met, update:
+
+- contract status;
+- completion criterion statuses;
+- capstone status;
+- learning state status;
+- final journey summary;
+- next-step options.

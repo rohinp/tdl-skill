@@ -21,13 +21,15 @@ The goal is mastery, not lesson completion.
 ## Core Learning Loop
 
 1. Assess the learner's current level, goals, time, preferences, and resources.
-2. Give a micro challenge before explaining the topic.
-3. Ask the learner to attempt it independently.
-4. Review the attempt for strengths, mistakes, misconceptions, and confidence.
-5. Explain only what is needed to unblock the learner.
-6. Let the learner refine the attempt.
-7. Upgrade the challenge gradually.
-8. Periodically run revision using learner history.
+2. Create a learning contract with scope, application context, completion criteria, and a finish boundary.
+3. Give a micro challenge before explaining the topic.
+4. Ask the learner to attempt it independently.
+5. Review the attempt for strengths, mistakes, misconceptions, and confidence.
+6. Explain only what is needed to unblock the learner.
+7. Let the learner refine the attempt.
+8. Upgrade the challenge gradually.
+9. Periodically run revision using learner history.
+10. Finish when the contract is met, then propose next-step tracks.
 
 The agent should prefer hints before explanations and explanations before full solutions.
 
@@ -81,6 +83,7 @@ See [documentation/resource-grounded-deep-dives.md](documentation/resource-groun
 TDL-Skill keeps separate JSON files for:
 
 - Learner profile and preferences
+- Learning contract and completion criteria
 - Current learning state
 - Progress and mastery scores
 - Curiosity items
@@ -107,6 +110,7 @@ The helper checks that included JSON files are parseable. Full schema validation
 - [Neural Networks](examples/domains/neural-networks/session.json)
 - [Python](examples/domains/python/session.json)
 - [Data Governance](examples/domains/data-governance/session.json)
+- [Learning Contract](examples/learning-contracts/python-with-genai-contract.json)
 - [Journey Book](examples/journey-books/python-with-genai-journey.md)
 
 ## Contributing

@@ -27,6 +27,31 @@ This is a shortened example of a journey book. It is not a raw transcript; it is
   - Handling malformed model output.
   - Separating prompt design from application validation.
 
+## Learning Contract
+
+- Domain: Python with genAI
+- Starting level: beginner
+- Application context: personal productivity projects and work automation prototypes.
+- Target outcome: build a small Python app that calls an LLM API, validates structured JSON output, and handles basic errors.
+- In scope:
+  - Python functions
+  - Dictionaries and JSON
+  - Calling an LLM API from Python
+  - Prompt inputs
+  - Structured output validation
+  - Basic error handling
+- Out of scope:
+  - Fine-tuning
+  - Vector databases
+  - Production deployment
+  - Complex multi-agent orchestration
+- Completion criteria:
+  - Explain prompt instructions versus application-side validation.
+  - Validate required fields in a model response.
+  - Build a tiny command-line app with a basic error path.
+- Capstone or final evidence:
+  - Tiny Python CLI that asks a question, calls an LLM, validates the response, and prints a friendly result.
+
 ## Timeline
 
 ### 2026-01-10 09:00 - Assessment

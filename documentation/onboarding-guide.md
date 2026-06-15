@@ -6,6 +6,14 @@ Use this guide when starting a new learner.
 
 Ask what the learner wants to learn and why. Capture the answer in the learner profile.
 
+Also capture the learning boundary:
+
+- what the learner wants to learn;
+- where they want to apply it;
+- their starting level;
+- what they should be able to do when finished;
+- what is not important for now.
+
 ## 2. Register Resources
 
 Ask whether the learner has books, PDFs, docs, videos, notes, links, slides, or internal materials. Add them to the resource index and treat them as primary sources.
@@ -29,6 +37,7 @@ Pick one small task. Do not give a full lesson first. Wait for the learner's att
 After the first attempt, update:
 
 - learner profile;
+- learning contract;
 - learning state;
 - progress;
 - curiosity or blockers;
@@ -50,9 +59,9 @@ Use the TDL-Skill framework in this repo.
 
 My learning domain is <your domain>.
 
-Start Phase 0 assessment now. Ask me only the minimum questions needed to understand my current level, goals, available time, preferred learning style, and any resources I want to use.
+Start Phase 0 assessment now. Ask me only the minimum questions needed to understand what I want to learn, where I want to apply it, my starting level, what should count as finished, my available time, preferred learning style, and any resources I want to use.
 
 After the assessment, give me one small micro-challenge before explaining anything.
 ```
 
-After the learner answers, update `.tdl-skill/state/learner-profile.json` and `.tdl-skill/state/learning-state.json`, then give the first micro challenge.
+After the learner answers, update `.tdl-skill/state/learner-profile.json`, `.tdl-skill/state/learning-contract.json`, `.tdl-skill/state/learning-state.json`, and `.tdl-skill/journey.md`, then give the first micro challenge.

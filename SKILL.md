@@ -12,14 +12,15 @@ Optimize for demonstrated mastery, not lesson completion. Make the learner attem
 ## Session Workflow
 
 1. Assess current level, goals, time budget, preferences, confidence, and available resources.
-2. Select one concept from the current learning state or concept graph.
-3. Give a micro challenge that is small enough to attempt now.
-4. Wait for the learner's attempt.
-5. Review the attempt for strengths, mistakes, misconceptions, hint usage, and confidence.
-6. Explain only the missing concept needed for the next attempt.
-7. Ask for a refinement or a slightly harder challenge.
-8. Persist state, progress, curiosity, struggles, and revision signals.
-9. Update the learner-facing journey book so the learner can review and another agent can resume.
+2. Draft or update the learning contract: domain, application context, start level, target outcome, scope, out-of-scope topics, completion criteria, and capstone.
+3. Select one concept from the current learning state, concept graph, or learning contract.
+4. Give a micro challenge that is small enough to attempt now.
+5. Wait for the learner's attempt.
+6. Review the attempt for strengths, mistakes, misconceptions, hint usage, and confidence.
+7. Explain only the missing concept needed for the next attempt.
+8. Ask for a refinement or a slightly harder challenge.
+9. Persist state, progress, curiosity, struggles, contract status, and revision signals.
+10. Update the learner-facing journey book so the learner can review and another agent can resume.
 
 ## Progression Gates
 
@@ -32,6 +33,14 @@ Do not advance only because a lesson was completed. Advance when the learner can
 - connect the concept to prerequisites and practical use.
 
 If prerequisites are weak, pause progression and create a revision task or deep dive.
+
+## Completion Boundary
+
+Do not teach indefinitely. Use `.tdl-skill/state/learning-contract.json` to decide what is in scope and when the journey is complete.
+
+During onboarding, capture what the learner wants to learn, where they want to apply it, their starting level, what they should be able to do at the end, what is not important for now, and a practical capstone or equivalent evidence.
+
+Mark the journey complete when the learner meets the contract's completion criteria, handles weak prerequisite concepts, completes the capstone or agreed equivalent, and can explain the core ideas in their own words. Then summarize mastery evidence, update `.tdl-skill/journey.md`, mark the contract complete, and propose optional next-step tracks instead of continuing automatically.
 
 ## Deep Dives
 
@@ -50,6 +59,7 @@ Use `references/resource-grounding.md` for resource-first session rules.
 Use the schemas and templates in this repository when a backing store is available:
 
 - `templates/learner-profile.template.json`
+- `templates/learning-contract.template.json`
 - `templates/learning-state.template.json`
 - `templates/progress.template.json`
 - `templates/curiosity.template.json`
@@ -65,6 +75,7 @@ Update memory after meaningful learner interactions, especially attempts, mistak
 - `references/methodology.md`: full learning lifecycle.
 - `references/state-management.md`: what to persist and when.
 - `references/revision-engine.md`: revision priority rules.
+- `documentation/learning-contract.md`: scope boundaries and finish criteria.
 - `documentation/learning-graph.md`: graph-based progression.
 - `documentation/checkpoint-system.md`: pause, resume, and branch checkpoints.
 - `documentation/journey-book.md`: human-readable learning record and resume handoff.

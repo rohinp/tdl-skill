@@ -24,6 +24,8 @@ TDL-Skill represents learning as a graph rather than a linear checklist.
 
 Before advancing to a node, check prerequisite mastery and recent evidence. If a prerequisite is weak, assign revision or a deep dive before continuing.
 
+Also check the learning contract. If a node is outside the agreed scope, do not add it to the required path. Store it as curiosity or a possible next-step track instead.
+
 ## Mastery Gates
 
 A node can define thresholds such as:

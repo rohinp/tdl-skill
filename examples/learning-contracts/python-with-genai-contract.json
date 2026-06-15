@@ -1,0 +1,74 @@
+{
+  "learner_id": "example-learner",
+  "domain": "Python with genAI",
+  "start_level": "beginner",
+  "target_outcome": "Build a small Python app that calls an LLM API, uses a clear prompt, validates structured JSON output, and handles basic errors.",
+  "application_context": "Personal productivity projects and work automation prototypes.",
+  "time_budget": "30 minutes per weekday",
+  "scope": {
+    "in_scope": [
+      "Python functions",
+      "Dictionaries and JSON",
+      "Environment variables for API keys",
+      "Calling an LLM API from Python",
+      "Prompt inputs",
+      "Structured output",
+      "Basic validation",
+      "Simple error handling"
+    ],
+    "out_of_scope": [
+      "Model training",
+      "Fine-tuning",
+      "Vector databases",
+      "Production deployment",
+      "Complex multi-agent orchestration"
+    ],
+    "assumptions": [
+      "Learner can run Python locally with guidance.",
+      "Learner wants practical coding tasks before theory."
+    ]
+  },
+  "completion_criteria": [
+    {
+      "id": "criterion-001",
+      "criterion": "Explain the difference between prompt instructions and application-side validation.",
+      "evidence": "Learner explanation in own words.",
+      "status": "pending"
+    },
+    {
+      "id": "criterion-002",
+      "criterion": "Write a Python function that validates required fields in a model response.",
+      "evidence": "Working function with at least one invalid-output test.",
+      "status": "pending"
+    },
+    {
+      "id": "criterion-003",
+      "criterion": "Build a tiny command-line app that sends a prompt and prints validated structured output.",
+      "evidence": "Capstone project runs locally or is clearly sketched if API access is unavailable.",
+      "status": "pending"
+    }
+  ],
+  "capstone": {
+    "description": "Build a tiny Python CLI that asks a question, calls an LLM, requests structured JSON, validates the response, and prints a friendly result.",
+    "evidence_required": [
+      "Readable function boundaries",
+      "Prompt construction",
+      "Response validation",
+      "Basic error path"
+    ],
+    "status": "not_started"
+  },
+  "finish_behavior": {
+    "when_complete": "Summarize the journey, mark the contract complete, and propose optional next tracks.",
+    "next_step_options": [
+      "Add tests",
+      "Use a web UI",
+      "Learn retrieval-augmented generation",
+      "Move into agent workflows",
+      "Switch to revision-only mode"
+    ]
+  },
+  "status": "active",
+  "created_at": "2026-01-10T09:00:00Z",
+  "updated_at": "2026-01-10T09:00:00Z"
+}

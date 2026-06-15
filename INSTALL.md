@@ -75,6 +75,7 @@ my-learning-project/
         ├── concept-graph.json
         ├── curiosity.json
         ├── learner-profile.json
+        ├── learning-contract.json
         ├── learning-branches.json
         ├── learning-state.json
         ├── progress.json
@@ -102,7 +103,7 @@ Use the TDL-Skill framework in this repo.
 
 My learning domain is <your domain>.
 
-Start Phase 0 assessment now. Ask me only the minimum questions needed to understand my current level, goals, available time, preferred learning style, and any resources I want to use.
+Start Phase 0 assessment now. Ask me only the minimum questions needed to understand what I want to learn, where I want to apply it, my starting level, what should count as finished, my available time, preferred learning style, and any resources I want to use.
 
 After the assessment, give me one small micro-challenge before explaining anything.
 ```
@@ -110,7 +111,7 @@ After the assessment, give me one small micro-challenge before explaining anythi
 After you answer the assessment questions, use:
 
 ```text
-Based on my answers, update `.tdl-skill/state/learner-profile.json` and `.tdl-skill/state/learning-state.json`, then give me the first micro-challenge.
+Based on my answers, update `.tdl-skill/state/learner-profile.json`, `.tdl-skill/state/learning-contract.json`, `.tdl-skill/state/learning-state.json`, and `.tdl-skill/journey.md`, then give me the first micro-challenge.
 ```
 
 For example:

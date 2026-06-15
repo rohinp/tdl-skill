@@ -24,6 +24,7 @@ Use the journey book to:
 Update `.tdl-skill/journey.md` after every meaningful learning event:
 
 - assessment answer;
+- learning contract or scope update;
 - micro-challenge assigned;
 - learner attempt;
 - feedback;
@@ -76,6 +77,18 @@ When an agent receives only `journey.md`, it should:
 3. Ask one clarifying question only if the next action is ambiguous.
 4. Recreate or update `.tdl-skill/state/*.json` if file access is available.
 5. Continue with the next micro-challenge, revision task, or checkpoint restoration.
+
+## Contract Section
+
+The journey book should include enough of the learning contract for a learner or new agent to understand the boundary:
+
+- what the learner wants to learn;
+- where they want to apply it;
+- starting level;
+- in-scope and out-of-scope topics;
+- completion criteria;
+- capstone or final practical evidence;
+- next-step options after completion.
 
 ## What Not To Store
 

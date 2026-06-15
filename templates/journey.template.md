@@ -24,6 +24,21 @@ This document is the human-readable learning record. It should let the learner r
 - Known strengths:
 - Known struggle areas:
 
+## Learning Contract
+
+- Domain: <domain>
+- Starting level: unknown
+- Application context:
+- Target outcome:
+- In scope:
+  - To be defined during Phase 0 assessment.
+- Out of scope:
+  - To be defined during Phase 0 assessment.
+- Completion criteria:
+  - To be defined during Phase 0 assessment.
+- Capstone or final evidence:
+  - To be defined during Phase 0 assessment.
+
 ## Resource Index
 
 No learner resources registered yet.
@@ -62,4 +77,4 @@ No revision tasks scheduled yet.
 
 ## Resume Brief
 
-If continuing from this document only, start by asking the Phase 0 assessment questions for <domain>. Then give one small micro-challenge before explaining anything.
+If continuing from this document only, start by asking the Phase 0 assessment questions for <domain>, including scope and finish criteria. Then draft the learning contract and give one small micro-challenge before explaining anything.
